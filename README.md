@@ -1,6 +1,2 @@
-Project Name
+Brunch with StockTwits
 ============
-
-Here, you can include details about what your project is and how it is
-supposed to be used.
-

@@ -8,7 +8,10 @@ exports.config =
         'test/javascripts/test.js': /^test(\/|\\)(?!vendor)/
         'test/javascripts/test-vendor.js': /^test(\/|\\)(?=vendor)/
       order:
-        before: []
+        before: [
+          'vendor/scripts/jquery-1.8.2.js'
+          'vendor/scripts/iscroll.js'
+        ]
 
     stylesheets:
       joinTo:
