@@ -11,8 +11,7 @@ class Logger
         console.log "["+level.toUpperCase()+"] "+msg
 
   constructor: ->
-    if window.forge != undefined
-      isTrigger = true
+    isTrigger = true if window.forge != undefined
 
     if isTrigger
       window.onerror = (e, u, l) ->
