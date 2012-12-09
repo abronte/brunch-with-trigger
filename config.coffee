@@ -9,8 +9,10 @@ exports.config =
         'test/javascripts/test-vendor.js': /^test(\/|\\)(?=vendor)/
       order:
         before: [
-          'vendor/scripts/jquery-1.8.2.js'
-          'vendor/scripts/iscroll.js'
+          'vendor/jquery-1.8.2.js'
+          'vendor/iscroll.js'
+          'vendor/logger.coffee'
+          'vendor/request.coffee'
         ]
 
     stylesheets:
