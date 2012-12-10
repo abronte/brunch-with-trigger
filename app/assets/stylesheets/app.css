@@ -2,49 +2,63 @@ body {
  background: #ccc;   
 }
 
-.flip {
-  -webkit-perspective: 800;
-   width: 100%;
-   height: 180px;
-    position: relative;
-    margin: 50px auto;
-}
-.flip .card.flipped {
-  -webkit-transform: rotatey(-180deg);
-}
-.flip .card {
+#demo1-wrapper {
   width: 100%;
-  height: 100%;
+  height: 460px;
+  overflow: hidden;
+  background: #DDDDDD;
+}
+
+#demo1 {
+  -webkit-perspective: 1000;
+}
+
+.card, .front, .back {
+  border-radius: 10px;
+  color: black;
+  float: left;
+  height: 440px;
+  line-height: 440px;
+  position: relative;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.front, .back {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  -webkit-backface-visibility: hidden;
+}
+
+.back {
+  color: black;
+  -webkit-transform: rotateY(180deg) translate3d(0,0,0);
+}
+
+.card {
   -webkit-transform-style: preserve-3d;
-  -webkit-transition: 0.5s;
+  -webkit-animation-name: default;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
 }
-.flip .card .face {
-  padding-top: 50px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-backface-visibility: hidden ;
-  z-index: 2;
-    font-family: Georgia;
-    font-size: 3em;
-    text-align: center;
-    /* line-height: 150px; */
+
+.card.flipped {
+  -webkit-animation-name: cardflipped;
 }
-.flip .card .face span{
-  font-size: 20px;
-  margin-top: -100px;
+
+@-webkit-keyframes default { 
+  from  { -webkit-transform: rotateY(180deg) translate3d(0,0,0); }
+  to    { -webkit-transform: rotateY(0deg) translate3d(0,0,0); }
 }
-.flip .card .front {
-  position: absolute;
-  z-index: 1;
-    background: black;
-    color: white;
-    cursor: pointer;
+
+@-webkit-keyframes cardflipped { 
+  from  { -webkit-transform: rotateY(0deg) translate3d(0,0,0); }
+  to    { -webkit-transform: rotateY(180deg) translate3d(0,0,0); }
 }
-.flip .card .back {
-  -webkit-transform: rotatey(-180deg);
-    background: blue;
-    background: white;
-    color: black;
-    cursor: pointer;
-}
+
