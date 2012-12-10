@@ -2,6 +2,17 @@ body {
  background: #ccc;   
 }
 
+#wrapper {
+  -webkit-perspective: 800;
+}
+
+.card {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
 .card, .front, .back {
   border-radius: 10px;
   color: black;
@@ -24,30 +35,11 @@ body {
 }
 
 .back {
-  color: black;
+  color: #fff;
+  background-color: black;
   -webkit-transform: rotateY(180deg) translate3d(0,0,0);
 }
 
-.card {
-  -webkit-transform-style: preserve-3d;
-  -webkit-animation-name: default;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-}
-
 .card.flipped {
-  -webkit-animation-name: cardflipped;
+  -webkit-transform: rotatey(-180deg) translate3d(0,0,0);
 }
-
-@-webkit-keyframes default { 
-  from  { -webkit-transform: rotateY(180deg) translate3d(0,0,0); }
-  to    { -webkit-transform: rotateY(0deg) translate3d(0,0,0); }
-}
-
-@-webkit-keyframes cardflipped { 
-  from  { -webkit-transform: rotateY(0deg) translate3d(0,0,0); }
-  to    { -webkit-transform: rotateY(180deg) translate3d(0,0,0); }
-}
-
