@@ -9,7 +9,7 @@ exports.config =
         'test/javascripts/test-vendor.js': /^test(\/|\\)(?=vendor)/
       order:
         before: [
-          'vendor/jquery-1.8.2.js'
+          'vendor/zepto.min.js'
           'vendor/iscroll.js'
           'vendor/logger.coffee'
           'vendor/request.coffee'
