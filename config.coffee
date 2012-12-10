@@ -10,6 +10,7 @@ exports.config =
       order:
         before: [
           'vendor/zepto.min.js'
+          'vendor/zepto.flickable.min.js'
           'vendor/iscroll.js'
           'vendor/logger.coffee'
           'vendor/request.coffee'
