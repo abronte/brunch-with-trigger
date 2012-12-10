@@ -1,2 +1,3 @@
 $ ->
-  $("#main").html "<h1>Sup bro?</h1>"
+  $(".flip").click ->
+    $(this).find(".card").addClass("flipped")
