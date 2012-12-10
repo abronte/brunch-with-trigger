@@ -1,4 +1,6 @@
 $ ->
+  log.info "Started"
+
   flipped = false
 
   $(".flip").click ->
