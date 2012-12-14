@@ -12,8 +12,7 @@ exports.config =
           'vendor/zepto.min.js'
           'vendor/zepto.flickable.min.js'
           'vendor/iscroll.js'
-          'vendor/logger.coffee'
-          'vendor/request.coffee'
+          'vendor/trigger_helper.min.js'
         ]
 
     stylesheets:
