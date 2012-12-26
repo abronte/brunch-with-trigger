@@ -6,6 +6,5 @@ A brunch skeleton to get you up and running with various tools on the Trigger.io
 Included libraries:
 
 * [Zepto](http://zeptojs.com/)
-* [Flickable](https://github.com/tomlongo/Flickable.js)
 * [iScroll v5 + momentum fix](https://github.com/abronte/iscroll)
-* Trigger.io helpers
+* [Trigger.io helpers](https://github.com/abronte/TriggerHelpers)
